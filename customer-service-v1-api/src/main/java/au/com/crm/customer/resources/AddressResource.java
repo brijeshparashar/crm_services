@@ -19,26 +19,26 @@ public class AddressResource implements Serializable {
 	private Integer addressId;
 	
 	@NotEmpty(message="{null.address.unitNumber}")
-	@Size(max=5)
+	@Size(max=5,message= "{length.address.unitNumber}")
 	private String unitNumber;
 	
 	
 	@NotEmpty(message="{null.address.streetName}")
-	@Size(max=20)
+	@Size(max=20,message="{length.address.streetName}")
 	private String streetName;
 	
 	
 	@NotEmpty(message="{null.address.suburb}")
-	@Size(max=20)
+	@Size(max=20,message= "{length.address.suburb}")
 	private String suburb;
 	
 	@NotEmpty(message="{null.address.postCode}")
-	@Size(min=4,max=10)
+	@Size(min=4,max=10,message= "{length.address.postCode}")
 	private String postCode;
 	
 	
 	@NotEmpty(message="{null.address.country}")
-	@Size(max=20)
+	@Size(max=20,message= "{length.address.country}")
 	private String country;	
 	
 	@NotEmpty(message="{null.address.addressType}")
