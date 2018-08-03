@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableAspectJAutoProxy
 @EnableJpaRepositories
-@EnableTransactionManagement
 public class CustomerConfiguration {
 
 	
