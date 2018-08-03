@@ -24,20 +24,20 @@ public class CustomerResource implements Serializable {
 	private Integer customerId;
 
 	@NotEmpty(message="{null.customer.firstName}")
-	@Size(max=20)
+	@Size(max=20, message="{length.customer.firstName}")
 	private String firstName;
 	
 	@NotEmpty(message="{null.customer.lastName}")
-	@Size(max=20)
+	@Size(max=20,message="{length.customer.lastName}")
 	private String lastName;
 	
 	@NotEmpty(message="{null.customer.emailId}")
 	@Email(message="{invalid.customer.emailId}")
-	@Size(min=5,max=50)
+	@Size(max=50,message="{length.customer.emailId}")
 	private String emailId;
 	
 	@Email(message="{invalid.customer.alternateEmailId}")
-	@Size(min=5,max=50)
+	@Size(max=50,message="{length.customer.alternateEmailId}")
 	private String alternateEmailId;
 	@Valid
 	private List<AddressResource> addresses = new ArrayList<>();
